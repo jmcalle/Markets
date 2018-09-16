@@ -34,7 +34,7 @@ class Controller:
 
 
 class List:
-    price_df: DataFrame
+    #price_df: pd.DataFrame
 
     def __init__(self, coin=None):
         self.coin_df = pandas.DataFrame()
@@ -42,7 +42,7 @@ class List:
         self.json_response = {}
         # print(self.coin_matrix.to_string)
 
-    def load_json(self, action: None, option=None) -> object:
+    def load_json(self, action=None, option=None):
         if option == "disk":
             with open(option, 'r') as infile:
                 self.json_response = json.load(infile)
